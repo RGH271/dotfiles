@@ -1,0 +1,91 @@
+@import "rose-pine.css";
+
+* {
+  font-family:
+    JetBrainsMono Nerd Font,
+    FontAwesome,
+    Noto Sans CJK;
+  font-size: 14px;
+  font-style: normal;
+  min-height: 0px;
+}
+
+#waybar {
+  background: transparent;
+  color: #191724;
+  margin: 5px 5px;
+}
+
+#workspaces {
+  border-radius: 1rem;
+  background-color: @base;
+  margin: 5px;
+  margin-left: 1rem;
+}
+
+#workspaces button {
+  color: #e0def4;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+#workspaces button.active {
+  color: @rose;
+  border-radius: 1rem;
+
+}
+
+#workspaces button:hover {
+  color: @iris;
+  border-radius: 1rem;
+}
+
+#mpris,
+#cpu,
+#clock,
+#memory,
+#pulseaudio,
+#custom-updates {
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+  background-color: @base;
+}
+
+#mpris {
+  color: @text;
+  border-radius: 1rem 1rem 1rem 1rem;
+  border-color: green;
+  border-style: solid;
+}
+
+#clock {
+  font-weight: bold;
+  color: @text;
+  border-radius: 1rem;
+}
+
+#memory {
+  border-radius: 1rem 0px 0px 1rem;
+  color: @love;
+  margin-left: 0.5rem;
+}
+
+#cpu {
+  color: @gold;
+}
+
+#pulseaudio {
+  color: @iris;
+}
+
+#custom-updates {
+  color: @foam;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+}
+
+#custom-sep {
+  color: @text;
+  margin: 5px 0;
+  background-color: @base;
+}

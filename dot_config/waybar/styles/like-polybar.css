@@ -1,0 +1,94 @@
+@import "rose-pine.css";
+
+* {
+  border: none;
+  border-radius: 0px;
+  font-family:
+    JetBrainsMono Nerd Font,
+    FontAwesome,
+    Noto Sans CJK;
+  font-size: 14px;
+  font-style: normal;
+  min-height: 21px;
+}
+
+window#waybar {
+  background: @base;
+  border-radius: 7px;
+}
+
+#workspaces button {
+  color: @text;
+  padding: 0px 8px 0px 8px;
+}
+
+#workspaces button.focused:first-child {
+  border-radius: 7px 0px 0px 7px;
+}
+
+#workspaces button.focused {
+  background-color: @highlightLow;
+  border-bottom: 3px solid @rose;
+}
+
+#workspaces button:hover {
+  color: @text;
+  background: @highlightHigh;
+}
+
+#workspaces button.urgent {
+  border-bottom: 3px solid @rose;
+}
+
+#workspaces button.urgent:first-child {
+  border-radius: 7px 0px 0px 7px;
+}
+
+#mpris,
+#cpu,
+#clock,
+#memory,
+#pulseaudio,
+#custom-updates {
+  background-color: @base;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpris {
+  color: @text;
+  border-bottom: 3px solid #1db954
+}
+
+#clock {
+  font-weight: bold;
+  color: @text;
+}
+
+#memory {
+  color: @love;
+}
+
+#cpu {
+  color: @gold;
+}
+
+#pulseaudio {
+  color: @iris;
+}
+
+#custom-updates {
+  color: @foam;
+  padding-right: 0.8rem;
+  border-radius: 0px 7px 7px 0px;
+}
+
+#custom-sep {
+  color: @text;
+  margin: 5px 0;
+  background-color: @base;
+}
+
+#mode {
+  color: @text;
+}

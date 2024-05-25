@@ -1,0 +1,91 @@
+// -*- mode: jsonc -*-
+{
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 26,
+    "width": 1430,
+    "margin-top": 5,
+
+    // choose order of modules
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "mpris",   
+	"memory",
+	"custom/sep",
+	"cpu",
+	"custom/sep",
+	"pulseaudio",
+	"custom/sep",
+	"custom/updates"
+    ],
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+    	"all-outputs": true,
+    	"warp-on-scroll": true,
+    	"format": "{value}",
+    	"format-icons": {
+        	"urgent": ""
+	}
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "mpris": {
+	"format": "{artist} - {title}",
+	"format-paused": "{artist} - {title}",
+	"player-icons": {
+		"default": "▶",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "⏸"
+	},
+	"ignored-players": ["firefox"]
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "CPU {usage}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": "RAM {percentage}%",
+        "max-length": 10
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon}  {volume}% ",
+        "format-muted": " 0%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "custom/updates": {
+       "format": "{icon} {}",
+       "return-type": "json",
+       "format-icons": {
+           "has-updates": "󱍷",
+           "updated": "󰂪"
+       },
+       "exec-if": "which waybar-module-pacman-updates",
+       "exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300"
+   },
+   "custom/sep": {
+	   "format": "|"
+   }
+}

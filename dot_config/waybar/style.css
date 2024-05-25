@@ -1,0 +1,119 @@
+@import "rose-pine.css";
+
+* {
+  border: none;
+  border-radius: 0px;
+  font-family:
+    JetBrainsMono Nerd Font,
+    FontAwesome,
+    Noto Sans CJK;
+  font-size: 14px;
+  font-style: normal;
+  min-height: 21px;
+}
+
+window#waybar {
+  background: transparent;
+  border-radius: 7px;
+}
+
+#workspaces button {
+  color: @text;
+  background: @base;
+  padding: 0px 8px 0px 8px;
+}
+
+#workspaces button.focused {
+  background-color: @highlightLow;
+  border-bottom: 3px solid @rose;
+}
+
+#workspaces button:hover {
+  background: @highlightHigh;
+}
+
+#workspaces button.urgent {
+  border-bottom: 3px solid @rose;
+}
+
+#workspaces button:first-child {
+  border-radius: 7px 0px 0px 7px;
+}
+
+#workspaces button:last-child {
+  border-radius: 0px 7px 7px 0px;
+}
+
+#workspaces button:only-child {
+  border-radius: 7px 7px 7px 7px;
+}
+
+#mpris,
+#cpu,
+#clock,
+#memory,
+#pulseaudio,
+#custom-sep,
+#custom-updates {
+  background-color: @base;
+}
+
+#custom-sep {
+  color: @text;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+#mpris {
+  color: @text;
+  border-radius: 7px;
+  border: 2px solid #1db954;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-right: 0.5rem;
+}
+
+#cpu,
+#memory,
+#pulseaudio,
+#custom-updates {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#clock {
+  font-weight: bold;
+  color: @text;
+  border-radius: 7px 7px 7px 7px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+#memory {
+  color: @love;
+  padding-left: 0.8rem;
+  border-radius: 7px 0px 0px 7px;
+}
+
+#cpu {
+  color: @gold;
+}
+
+#pulseaudio {
+  color: @iris;
+}
+
+#custom-updates {
+  color: @foam;
+  padding-right: 0.8rem;
+  border-radius: 0px 7px 7px 0px;
+}
+
+#mode {
+  color: @love;
+  background: @base;
+  border-radius: 7px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-left: 0.5rem;
+}
