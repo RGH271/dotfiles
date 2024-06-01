@@ -1,7 +1,3 @@
-# Default config for tofi
-#
-# Copy this file to ~/.config/tofi/config and get customising!
-#
 # A complete reference of available options can be found in `man 5 tofi`.
 
 # Point size of text.
@@ -21,7 +17,7 @@ font-variations = ""
 # specified via `font`. Disabling font hinting speeds up text
 # rendering appreciably, but will likely look poor at small font pixel
 # sizes.
-hint-font = true
+hint-font = false
 
 #
 ### Text theming
@@ -145,7 +141,7 @@ outline-width = 0
 padding-left = 20%
 padding-top = 05%
 result-spacing = 25
-font = monospace
+font = /usr/share/fonts/TTF/JetBrainsMono-Regular.ttf
 
 background-color = #000A
 	# Whether to clip text drawing to be within the specified padding. This
