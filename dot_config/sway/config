@@ -135,7 +135,7 @@ bindsym $mod+$smod+0 move container to workspace $ws10
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    bindsym $mod+f fullscreen toggle
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
@@ -188,6 +188,8 @@ gaps vertical 2
 
 # remove title bars
 default_border none
+default_floating_border none
+smart_borders on
 
 # Set media keys
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -210,5 +212,11 @@ exec_always --no-startup-id autotiling
 
 # start inactive window transparecny
 exec_always --no-startup-id inactive-windows-transparency
+
+# deal with popups and urgent workspaces
+popup_during_fullscreen smart
+
+force_display_urgency_hint 500 ms
+
 
 include /etc/sway/config.d/*

@@ -39,7 +39,7 @@
     "mpris": {
     	"format": "{artist} - {title}",
     	"format-paused": "{artist} - {title}",
-    	"title-len": 28,
+    	"title-len": 26,
     	"artist-len": 20,
     	"player-icons": {
     		"default": "▶",
