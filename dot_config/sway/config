@@ -27,6 +27,24 @@ output * bg `find $wallpapers_path -type f | shuf -n 1` fill
 
 output LVDS-1 resolution 1440x900 position 1440 0
 
+# set primary Rosé Pine colorscheme colors
+set $base           #191724
+set $surface        #1f1d2e
+set $overlay        #26233a
+set $muted          #6e6a86
+set $subtle         #908caa
+set $text           #e0def4
+set $love           #eb6f92
+set $gold           #f6c177
+set $rose           #ebbcba
+set $pine           #31748f
+set $foam           #9ccfd8
+set $iris           #c4a7e7
+set $highlightlow   #21202e
+set $highlightmed   #403d52
+set $highlighthigh  #524f67
+
+
 ### Input configuration
 input "1:1:AT_Translated_Set_2_keyboard" {
        dwt enabled
@@ -127,6 +145,15 @@ bindsym $mod+$smod+8 move container to workspace $ws8
 bindsym $mod+$smod+9 move container to workspace $ws9
 bindsym $mod+$smod+0 move container to workspace $ws10
 
+# Theming border and Windows --------------
+# target                 title     bg    text   indicator  border
+client.focused           $rose     $base $text  $surface   $surface
+client.focused_inactive  $text     $base $text  $subtle    $surface
+client.unfocused         $text     $base $text  $overlay   $overlay
+client.urgent            $text     $base $text  $love      $love
+client.placeholder       $base     $base $text  $overlay   $overlay
+client.background        $base
+
 # Layout stuff:
 #
     # Switch the current container between different layout styles
@@ -187,8 +214,8 @@ gaps horizontal 2
 gaps vertical 2
 
 # remove title bars
-default_border none
-default_floating_border none
+default_border pixel
+default_floating_border pixel
 smart_borders on
 
 # Set media keys
