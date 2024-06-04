@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 26,
+    "height": 24,
     "width": 1430,
     "margin-top": 5,
 
@@ -16,11 +16,8 @@
     "modules-right": [
         "mpris",   
 	"memory",
-	"custom/sep",
 	"cpu",
-	"custom/sep",
 	"pulseaudio",
-	"custom/sep",
 	"custom/updates"
     ],
     // Modules configuration

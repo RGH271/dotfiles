@@ -34,6 +34,7 @@ window#waybar {
 
 #workspaces button.urgent {
   border-bottom: 3px solid @rose;
+  color: @rose;
 }
 
 #workspaces button:first-child {

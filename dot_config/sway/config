@@ -19,6 +19,15 @@ set $term foot
 # on the original workspace that the command was run on.
 set $menu tofi-drun | xargs swaymsg exec --
 
+# start the notification daemon
+exec swaync
+
+# start the autotiling script
+exec_always --no-startup-id autotiling
+
+# start inactive window transparecny
+exec_always --no-startup-id inactive-windows-transparency
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -84,6 +93,9 @@ bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+# toggle control centre
+bindsym $mod+Shift+n exec swaync-client -t -sw
 #
 # Moving around:
 #
@@ -234,11 +246,6 @@ bar {
     bar swaybar_command waybar
 }
 
-# start the autotiling script
-exec_always --no-startup-id autotiling
-
-# start inactive window transparecny
-exec_always --no-startup-id inactive-windows-transparency
 
 # deal with popups and urgent workspaces
 popup_during_fullscreen smart
