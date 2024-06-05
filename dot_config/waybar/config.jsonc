@@ -34,10 +34,10 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "mpris": {
-    	"format": "{artist} - {title}",
-    	"format-paused": "{artist} - {title}",
-    	"title-len": 26,
-    	"artist-len": 20,
+	"format": "{dynamic}",
+	"dynamic-order": ["artist", "title"],
+	"title-len": 25,
+	"artist-len": 20,
     	"player-icons": {
     		"default": "▶",
     		"mpv": "🎵"
@@ -45,7 +45,8 @@
     	"status-icons": {
     		"paused": "⏸"
     	},
-	"ignored-players": ["firefox"]
+	"ignored-players": ["firefox"],
+	"interval": 1
     },
     "cpu": {
         "interval": 2,
