@@ -7,6 +7,7 @@
 
     // choose order of modules
     "modules-left": [
+	"custom/arch",
         "sway/workspaces",
         "sway/mode"
     ],
@@ -18,7 +19,8 @@
 	"memory",
 	"cpu",
 	"pulseaudio",
-	"custom/updates"
+	"custom/updates",
+	"tray"
     ],
     // Modules configuration
     "sway/workspaces": {
@@ -31,7 +33,7 @@
 	}
     },
     "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+        "format": "<span>{}</span>"
     },
     "mpris": {
 	"format": "{dynamic}",
@@ -87,5 +89,13 @@
    },
    "custom/sep": {
 	   "format": "|"
+   },
+   "tray": {
+      "icon-size": 20,
+      "spacing": 10
+   },
+   "custom/arch": {
+      "format": "󰣇",
+      "tooltip": false
    }
 }

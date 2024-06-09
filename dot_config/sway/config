@@ -1,6 +1,6 @@
-# Default config for sway
-
-### Variables
+#
+## Variables
+#
 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod1
@@ -15,26 +15,7 @@ set $right l
 set $term foot
 
 # Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
 set $menu tofi-drun | xargs swaymsg exec --
-
-# start the notification daemon
-exec swaync
-
-# start the autotiling script
-exec_always --no-startup-id autotiling
-
-# start inactive window transparecny
-exec_always --no-startup-id inactive-windows-transparency
-
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-set $wallpapers_path ~/.config/wallpaper
-output * bg `find $wallpapers_path -type f | shuf -n 1` fill
-
-output LVDS-1 resolution 1440x900 position 1440 0
 
 # set primary Rosé Pine colorscheme colors
 set $base           #191724
@@ -54,7 +35,40 @@ set $highlightmed   #403d52
 set $highlighthigh  #524f67
 
 
-### Input configuration
+#
+## Startup apps
+#
+
+# start the notification daemon
+exec swaync
+
+# start the autotiling script
+exec_always --no-startup-id autotiling
+
+# start inactive window transparecny
+exec_always --no-startup-id inactive-windows-transparency
+
+# start xwayland
+xwayland enable
+
+
+
+## Output configuration
+#
+
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+set $wallpapers_path ~/.config/wallpaper
+output * bg `find $wallpapers_path -type f | shuf -n 1` fill
+
+output LVDS-1 resolution 1440x900 position 1440 0
+
+seat seat0 xcursor_theme BreezeX-RosePine-Linux 22
+
+
+#
+## Input configuration
+#
+
 input "1:1:AT_Translated_Set_2_keyboard" {
        dwt enabled
        xkb_layout gb
@@ -63,11 +77,8 @@ input "1:1:AT_Translated_Set_2_keyboard" {
        middle_emulation enabled
 }
 
-seat seat0 xcursor_theme BreezeX-RosePine-Linux 22
 
-# start xwayland
-xwayland enable
-
+#
 ### Key bindings
 # Basics:
 #
