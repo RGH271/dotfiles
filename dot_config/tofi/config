@@ -141,7 +141,7 @@ outline-width = 0
 padding-left = 20%
 padding-top = 05%
 result-spacing = 25
-font = /usr/share/fonts/TTF/JetBrainsMono-Regular.ttf
+font = /usr/share/fonts/TTF/JetBrainsMonoNerdFont-Regular.ttf
 
 background-color = #000A
 	# Whether to clip text drawing to be within the specified padding. This
@@ -223,7 +223,7 @@ background-color = #000A
 
 	# If true, directly launch applications on selection when in drun mode.
 	# Otherwise, just print the command line to stdout.
-	drun-launch = true
+	drun-launch = false
 
 	# The terminal to run terminal programs in when in drun mode.
 	# This option has no effect if drun-launch is set to true.
